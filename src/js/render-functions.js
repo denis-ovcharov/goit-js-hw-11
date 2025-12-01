@@ -9,10 +9,10 @@ export function createGallery(images) {
           <img class="gallery-image" src="${image.webformatURL}" alt="${image.tags}" />
         </a>
         <ul class="image-info">
-          <li class="info"><p>Likes ${image.likes}</p></li>
-          <li class="info"><p>Views ${image.views}</p></li>
-          <li class="info"><p>Comments ${image.comments}</p></li>
-          <li class="info"><p>Downloads ${image.downloads}</p></li>
+          <li class="info">Likes<p>${image.likes}</p></li>
+          <li class="info">Views<p>${image.views}</p></li>
+          <li class="info">Comments<p>${image.comments}</p></li>
+          <li class="info">Downloads<p>${image.downloads}</p></li>
         </ul>
       </li>`
     ).join('');
