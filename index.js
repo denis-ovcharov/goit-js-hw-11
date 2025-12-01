@@ -3,10 +3,10 @@ import{a as c,S as f,i as l}from"./assets/vendor-DvfmeZXB.js";(function(){const 
           <img class="gallery-image" src="${o.webformatURL}" alt="${o.tags}" />
         </a>
         <ul class="image-info">
-          <li class="info"><p>Likes ${o.likes}</p></li>
-          <li class="info"><p>Views ${o.views}</p></li>
-          <li class="info"><p>Comments ${o.comments}</p></li>
-          <li class="info"><p>Downloads ${o.downloads}</p></li>
+          <li class="info">Likes<p>${o.likes}</p></li>
+          <li class="info">Views<p>${o.views}</p></li>
+          <li class="info">Comments<p>${o.comments}</p></li>
+          <li class="info">Downloads<p>${o.downloads}</p></li>
         </ul>
       </li>`).join("");i.gallery.innerHTML=r,new f(".gallery a",{captionsData:"alt",captionDelay:250}).refresh()}function m(){i.gallery.innerHTML=""}function p(){i.loader.classList.remove("hidden")}function y(){i.loader.classList.add("hidden")}const i={form:document.querySelector(".form"),gallery:document.querySelector(".gallery"),loader:document.querySelector(".loader")};i.form.addEventListener("submit",async s=>{s.preventDefault();const r=i.form.elements.search.value.trim();r&&(m(),p(),await g(r))});async function g(s){try{const r=await u(s);if(r.hits.length===0){l.error({title:"Error",message:"Sorry, there are no images matching your search query. <br>Please try again!",position:"topRight"});return}d(r.hits)}catch(r){l.error({title:"Error",message:"Something went wrong. Please try again.",position:"topRight"}),console.error("API error:",r)}finally{y()}}
 //# sourceMappingURL=index.js.map
