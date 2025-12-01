@@ -13,11 +13,7 @@ refs.form.addEventListener('submit', async e => {
     e.preventDefault();
     const query = refs.form.elements.search.value.trim();
     if (!query) {
-        return iziToast.error({
-            title: "Error",
-            message: "Please enter a search query.",
-            position: "topRight",
-        });
+        return;
     }
     clearGallery();
     showLoader();
