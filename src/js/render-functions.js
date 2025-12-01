@@ -17,11 +17,13 @@ export function createGallery(images) {
       </li>`
     ).join('');
 
-    refs.gallery.innerHTML = markup;
-    const simpleLightbox = new SimpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionDelay: 250,
-    });
+  refs.gallery.innerHTML = markup;
+
+  const simpleLightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+  });
+
     simpleLightbox.refresh();
 }
 
